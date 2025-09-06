@@ -37,8 +37,8 @@ h3 {
     margin-top: 2.5rem;
 }
 
-.course_title {
-    color: var(--accent2-color);
+span {
+    display: block;
 }
 
 nav {
