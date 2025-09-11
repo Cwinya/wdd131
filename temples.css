@@ -67,7 +67,7 @@ nav {
     padding: 0.5rem 0;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    border-radius: 4px;
+    /* border-radius: 4px; */
 }
 
 nav ul {
