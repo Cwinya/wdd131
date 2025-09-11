@@ -64,9 +64,9 @@ main {
 
 nav {
     text-align: center;
-    margin-bottom: 1rem;
     padding: 0.5rem 0;
-    background-color: #e2e2e2;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     border-radius: 4px;
 }
 
@@ -76,11 +76,13 @@ nav ul {
     align-items: center;
     gap: 1rem;
     list-style: none;
+    margin-right: 5rem;
+    color: var(--secondary-color);
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--secondary-color);
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
@@ -88,6 +90,14 @@ nav a {
 nav a:hover {
     background-color: #333;
     color: #fff;
+}
+
+nav > span {
+    position: relative;
+    float: left;
+    top: 10px;
+    margin: 0 1rem;
+    font-size: 1.5rem;
 }
 
 .image-gallery {
@@ -120,10 +130,17 @@ figure {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+#current-year {
+    color: var(--secondary-color);
+}
+
+#lastModified {
+    color: var(--accent2-color);
+}
 footer {
     background-color: var(--primary-color);
     color: var(--text-color);
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
-    margin-top: 2rem;
+    /* margin-top: 1rem; */
 }
