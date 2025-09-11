@@ -43,7 +43,6 @@ span {
     font-weight: bold;
     top: 68px;
     left: 360px;
-    margin-right: rem;
     color: var(--accent2-color);
     text-align: center;
 }
