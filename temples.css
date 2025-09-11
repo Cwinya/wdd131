@@ -1,0 +1,129 @@
+/* Use the external temples.css and temples-large.css files to layout and style the page as shown is the example screenshots. Your design must support a responsive view in mobile and larger views.
+
+The temples.css file is used for the mobile view and the temples-large.css file is used for the larger view.
+Most of your CSS should be located in the temples.css file in mobile first design.
+
+Use your own color schema.
+Please note: You are responsible to practice good design principles of alignment, color contrast, proximity, repetition, and consistent white space.
+
+Use your own typography choice by using the Google Fonts API service to select one or two fonts to use on the page.
+Video Demonstration: ▶️ Using Google Fonts – [ 1:56 minutes ]
+
+Use CSS Flex on the navigation nav.
+Video Demonstration: ▶️ CSS Flex Navigation Menu – [ 7:58 minutes ]
+CodePen ☼ Navigation Menu using CSS Flex
+
+The navigation must employ a hover affect. See the CodePen above for an example.
+Check Your Understanding
+The main element has a limited width and is centered on the screen horizontally.
+Check Your Understanding
+Layout the main column figure elements using CSS Grid. In the mobile view, there should only be one (1) column.
+The application of CSS Grid to support a responsive view is up to you.
+
+
+Some of the options could be:
+use grid-template-column specific fr changes in the media query
+use grid-template-column property with a repeat function and auto-fit and minmax function.
+CodePen ☼ Grid Column Layouts and Image Effects
+Look at the CSS for the .container class. */
+:root {
+    --primary-color: #1e0f61;
+    --secondary-color: #ffffff;
+    --heading1-color: #ffffff;
+    --heading2-color: #1e0f61;
+    --text-color: #000000;
+    --heading-font: "Helvectica", sans-serif;
+    --body-font: "Fira Sans", sans-serif;
+    --accent1-color: #080706e3;
+    --accent2-color: #f3e416;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    background-color: #e2e2e2;
+    border-radius: 4px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+figure figcaption {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+}
+
+figure > img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+figure {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
