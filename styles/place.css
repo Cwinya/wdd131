@@ -1,0 +1,122 @@
+/* Global */
+:root {
+  --red: #d62828;
+  --green: #007a33;
+  --white: #ffffff;
+  --black: #000000;
+  --shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--white);
+  color: #222;
+}
+
+/* Header */
+header {
+  background: var(--red);
+  color: var(--white);
+  text-align: center;
+  padding: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 10px solid var(--green);
+}
+
+/* Hero */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Cards */
+.card {
+  background: var(--white);
+  padding: 1rem;
+  margin: 1rem auto;
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  text-align: center;
+}
+
+.card h2 {
+  color: var(--black);
+  padding: 0.5rem;
+  margin: -1rem -1rem 1rem -1rem;
+  text-align: center;
+
+}
+
+/* Weather section icon for mobile */
+.weather h2::after {
+  content: "";
+}
+
+.weather h2 img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* Footer */
+footer {
+  background: var(--red);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0;
+  border-top: 5px solid var(--green);
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* ===========================
+   Wide View Styles
+   =========================== */
+@media (min-width: 800px) {
+  .hero {
+    position: relative;
+  }
+
+  .card {
+    position: absolute;
+    margin: 0;
+    max-width: 250px;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: left;
+  }
+
+  .card h2 {
+    position: relative;
+    background: var(--green);
+    color: var(--white);
+    text-align: left;
+    right: 12%;
+    margin: 0.01rem;
+  }
+
+  .data {
+    top: 10%;
+    left: 5%;
+  }
+
+  .weather {
+    bottom: 10%;
+    right: 5%;
+  }
+
+  /* Use pseudo-element icon instead of inline SVG in wide view */
+  .weather h2 img {
+    display: none;
+  }
+
+  .weather h2::after {
+    content: " ⛅";
+  }
+}

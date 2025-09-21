@@ -1,28 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uganda</title>
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>County Page</h1>
-    </header>
-    <main>
-        <section class="">
-            <h2>Data</h2>
-        </section>
-        <section>
-            <div>
-                <h2>Weather</h2>
-                <picture></picture>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p id="current-year">&copy;2025 &#9749; Cwinya Moses &#9749; Uganda</p>
-        <p id="lastModified"></p>
-    </footer>
+  <header>
+    <h1>Uganda</h1>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/koala.jpg" media="(min-width: 800px)">
+        <source srcset="images/koala.jpg" media="(min-width: 500px)">
+        <img src="images/koala.jpg" alt="Photo of Uganda" />
+      </picture>
+
+      <!-- DATA CARD -->
+      <div class="card data">
+        <h2>Data</h2>
+          <p><strong>Area:</strong> 587,041 sq km</p>
+          <p><strong>Population:</strong> 27,691,018</p>
+          <p><strong>Capital:</strong> Kampala</p>
+          <p><strong>Languages:</strong> Alur, English</p>
+          <p><strong>Currency:</strong> Uganda Shillings</p>
+          <p><strong>Time Zone:</strong> UTC+3</p>
+          <p><strong>Calling Code:</strong> +256</p>
+          <p><strong>Internet TLD:</strong> .ug</p>
+      </div>
+
+      <!-- WEATHER CARD -->
+      <div class="card weather">
+        <h2>Weather</h2>
+        <p><strong>Temperature:</strong> <span id="temp">10</span> °C</p>
+        <p><strong>Conditions:</strong> Partly Cloudy</p>
+        <p><strong>Wind:</strong> <span id="speed">5</span> km/h</p>
+        <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span> °C</p>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; <span id="year"></span> 🌸 Cwinya Moses Jinja 🌸 Uganda</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
 </body>
 </html>
