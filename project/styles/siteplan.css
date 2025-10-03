@@ -1,0 +1,79 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFA500; /* Orange for background */
+    color: #228B22; /* Forest Green for text */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    color: #228B22; /* Forest Green for headings */
+    font-size: 2.5em;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for readability */
+    border-radius: 8px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    color: #228B22; /* Forest Green for headings */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #228B22; /* Accent line */
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-family: Georgia, serif;
+    color: #228B22;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* List styling */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Preformatted text for wireframes */
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,332 @@
+/* Color Schema and Typography from Site Plan */
+:root {
+    --primary-maroon: #800020; /* Primary/Accent */
+    --secondary-gray: #333333; /* Secondary/Text */
+    --background-cream: #FFFFF0; /* Background */
+    --font-heading: Georgia, serif;
+    --font-body: Arial, sans-serif;
+}
+
+/* Global/Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-cream);
+    color: var(--secondary-gray);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-maroon);
+}
+
+a {
+    color: var(--primary-maroon);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header/Navigation */
+header {
+    background-color: var(--background-cream);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--primary-maroon);
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.primary-nav, .user-actions input, .sidebar {
+    /* Hide desktop elements on mobile by default */
+    display: none; 
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: var(--primary-maroon);
+    cursor: pointer;
+}
+
+/* Mobile Menu (initially hidden) */
+.mobile-menu {
+    display: none;
+    background-color: var(--primary-maroon);
+    color: var(--background-cream);
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.mobile-menu.open {
+    display: block;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.mobile-menu a {
+    color: var(--background-cream);
+    display: block;
+    padding: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f7e6e6; /* Lighter shade of maroon */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-image {
+    background: url('placeholder-paella.jpg') center/cover; /* Placeholder */
+    height: 200px;
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-maroon);
+    color: var(--background-cream);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+/* Cuisine Tags/Filters */
+.cuisine-tags {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.tag-list {
+    display: flex;
+    overflow-x: auto; /* Horizontal scroll for mobile */
+    gap: 10px;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.tag {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.tag.active, .tag:hover {
+    background-color: var(--primary-maroon);
+    color: var(--background-cream);
+    border-color: var(--primary-maroon);
+}
+
+/* Recipe Grid (Mobile First) */
+.recipe-grid-container {
+    display: flex; /* For desktop layout */
+    padding: 20px;
+}
+
+.recipe-grid {
+    display: grid;
+    gap: 20px;
+    /* Mobile: Single Column */
+    grid-template-columns: 1fr; 
+}
+
+.recipe-card {
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-info {
+    padding: 15px;
+}
+
+.recipe-info h4 {
+    margin-bottom: 5px;
+}
+
+/* Newsletter CTA */
+.newsletter-cta {
+    background-color: var(--primary-maroon);
+    color: var(--background-cream);
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.newsletter-cta input {
+    padding: 10px;
+    border: none;
+    width: 80%;
+    max-width: 300px;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-gray);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h4 {
+    color: var(--background-cream);
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: white;
+    display: block;
+    padding: 5px 0;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+
+/* DESKTOP VIEW (Wireframe: Larger View) */
+@media (min-width: 768px) {
+    
+    /* Header/Navigation */
+    header {
+        padding: 15px 40px;
+    }
+
+    .menu-btn {
+        display: none; /* Hide hamburger menu */
+    }
+
+    .primary-nav, .user-actions input {
+        display: block;
+    }
+
+    .primary-nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+    }
+
+    .user-actions {
+        display: flex;
+        align-items: center;
+    }
+    
+    .user-actions input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    /* Hero Section (Desktop Layout) */
+    .hero {
+        display: flex;
+        text-align: left;
+        padding: 60px 40px;
+        height: 300px;
+    }
+    
+    .hero-content {
+        flex: 1;
+        padding-right: 20px;
+    }
+    
+    .hero-image {
+        flex: 1;
+        height: auto;
+        margin-top: 0;
+    }
+    
+    /* Main Grid/Sidebar */
+    .recipe-grid-container {
+        padding: 40px;
+    }
+
+    .sidebar {
+        display: block; /* Show sidebar on desktop */
+        width: 200px;
+        padding-right: 30px;
+        border-right: 1px solid #eee;
+    }
+    
+    .sidebar label, .sidebar select {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .sidebar select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .recipe-grid {
+        /* Desktop: 3-column grid */
+        grid-template-columns: repeat(3, 1fr);
+        flex-grow: 1;
+        padding-left: 30px;
+    }
+    
+    /* Footer */
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .footer-links, .social-media {
+        flex: 1;
+        padding: 0 20px;
+    }
+    
+    .copyright {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #555;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Global Gastronome: A World of Recipes</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/scripts.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>The Global Gastronome 🌍</h1>
+        </div>
+        <nav class="primary-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cuisines</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <input type="text" placeholder="Search recipes..." aria-label="Search recipes">
+            <button class="menu-btn" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cuisines</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Featured Recipe of the Month</h2>
+                <p>Authentic Spanish Paella Valenciana</p>
+                <a href="#" class="cta-button">View Recipe</a>
+            </div>
+            <div class="hero-image">
+            </div>
+        </section>
+
+        <section class="cuisine-tags">
+            <h3>Popular Cuisines</h3>
+            <div class="tag-list">
+                <button class="tag active" data-cuisine="all">All</button>
+                <button class="tag" data-cuisine="italian">Italian</button>
+                <button class="tag" data-cuisine="mexican">Mexican</button>
+                <button class="tag" data-cuisine="asian">Asian</button>
+                <button class="tag" data-cuisine="african">African</button>
+            </div>
+        </section>
+        
+        <section class="recipe-grid-container">
+            
+            <aside class="sidebar">
+                <h3>Filter Recipes</h3>
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="all">Any</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                </select>
+                <label for="dietary">Dietary:</label>
+                <select id="dietary">
+                    <option value="all">Any</option>
+                    <option value="veg">Vegetarian</option>
+                    <option value="gf">Gluten-Free</option>
+                </select>
+            </aside>
+            
+            <div class="recipe-grid" id="recipe-list">
+            </div>
+        </section>
+
+        <section class="newsletter-cta">
+            <h3>Join Our Global Community!</h3>
+            <p>Subscribe for weekly inspiration, tips, and exclusive recipes.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required aria-label="Enter email for newsletter">
+                <button type="submit" class="cta-button">Subscribe</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <nav>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="social-media">
+            <h4>Connect</h4>
+            <span>[FB] [IG] [Pin]</span>
+        </div>
+        <p class="copyright">&copy; 2025 The Global Gastronome. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
